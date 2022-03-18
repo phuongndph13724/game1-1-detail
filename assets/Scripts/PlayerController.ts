@@ -49,7 +49,7 @@ export class PlayerController extends Component {
       Người thứ ba ở vị trí (2, -1,5, 0) .
   
    * Khởi tạo Node có tên là Player trong csene => Khởi tạo capsule cho Player có vị trí là (0,0,0)
-      Để nhìn thấy đối tượng trong thời gian chạy, chúng ta cần điều chỉnh một số thông số của Máy ảnh trong cảnh, đặt vị trí thành (0, 0, 13)
+      Để nhìn thấy đối tượng trong thời gian chạy, chúng ta cần điều chỉnh một số thông số của Máy ảnh trong cảnh, sửa position (0, 0, 13), sửa Rotation thành (0,0,0)
    */
   private _startJump: boolean = false;
   // khởi tạo thuộc tính đầu khi start game có giá trị là false;
