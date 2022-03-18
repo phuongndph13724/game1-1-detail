@@ -204,6 +204,9 @@ export class PlayerController extends Component {
     }
   }
 }
+/**
+ * B6-1 :Thêm một  Component PlayController mới vào trong nút Player
+ */
 
 /**
  * [1] Class member could be defined like this.
