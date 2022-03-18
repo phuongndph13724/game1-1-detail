@@ -77,7 +77,7 @@ export class PlayerController extends Component {
     // [3]
     (window as any).player = this;
     // input.on(Input.EventType.MOUSE_UP, this.onMouseUp, this); (B17)
-    //B2: khởi tạo hành động từ người dùng nhập vào ở phương thức onMouseUp
+    //B4: khởi tạo hành động từ người dùng nhập vào ở phương thức onMouseUp
     // B17: bật tắt động tính năng theo dõi tin nhắn chuột của nhân vật.
   }
   reset() {
@@ -110,7 +110,7 @@ export class PlayerController extends Component {
   }
 
   jumpByStep(step: number) {
-    //B4:   Khởi tạo phương thức jumpByStep có biến là step type number
+    //B2:   Khởi tạo phương thức jumpByStep có biến là step type number
     if (this._isMoving) {
       return;
       // nếu có biến _isMoving thì không có giá trị trả về
