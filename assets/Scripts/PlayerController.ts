@@ -42,7 +42,15 @@ export class PlayerController extends Component {
    * B29-1 : Sửa đổi trong phương thức jumpByStep()
    */
 
-  // B1:  Khởi tạo thuộc tính của đối tượng PlayerController
+  /**
+   * // B1:  Khởi tạo thuộc tính của đối tượng PlayerController
+   * Đầu tiên ở vị trí (0, -1,5, 0) .
+      Cái thứ hai ở vị trí (1, -1,5, 0) .
+      Người thứ ba ở vị trí (2, -1,5, 0) .
+  
+   * Khởi tạo Node có tên là Player trong csene => Khởi tạo capsule cho Player có vị trí là (0,0,0)
+      Để nhìn thấy đối tượng trong thời gian chạy, chúng ta cần điều chỉnh một số thông số của Máy ảnh trong cảnh, đặt vị trí thành (0, 0, 13)
+   */
   private _startJump: boolean = false;
   // khởi tạo thuộc tính đầu khi start game có giá trị là false;
   private _jumpStep: number = 0;
