@@ -168,6 +168,7 @@ export class PlayerController extends Component {
        */
       /**
        * B10 Tạo một file .ts trong folder Scripts có tên là GameManager
+       * Tạo một nút GameManager trong scene
        * => file GameManager.ts
        */
     }

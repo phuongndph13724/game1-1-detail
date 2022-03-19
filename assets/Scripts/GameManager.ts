@@ -58,7 +58,7 @@ export class GameManager extends Component {
   @property({ type: CCInteger })
   public roadLength: Number = 1000;
 
-  @property({type: Label})
+  @property({ type: Label })
   public stepsLabel: Label | null = null;
   // B26-1 Khởi tạo Component stepsLabel cho GameManager
 
@@ -90,13 +90,12 @@ export class GameManager extends Component {
   start() {
     // this.generteRoad();
     // //B14 gọi dến hàm generteRoad() để chạy
-    // Kéo Cube trong Prefabs vào  CubePrfb trong nút GameManager
+    // Kéo Cube trong Prefabs vào (GameManager)  CubePrfb trong nút GameManager
     // Kéo Camenra main xuống Player
     // Tạo một Button tên là PlayerButton trong nút csene
     // Tạo một nút có tên là StartMenu trong Canvas và kéo PlayButton vào trong
     // Điều chỉnh kích thước cho phù hợp
     // Tạo một nút Sprite có tên là BG trong StartMenu và kéo lên trước PlayerButton
-
 
     // B22-1 : Trỏ đến hành động curState có giá trị bằng GameState.GS_INIT để bắt đầu game
     this.curState = GameState.GS_INIT;
@@ -150,12 +149,10 @@ export class GameManager extends Component {
           // trỏ đến setInputActive(active: boolean) ở PlayController chuyển thành giá trị là False
         }
 
-        if(this.stepsLabel){
+        if (this.stepsLabel) {
           // B26-3 Đặt lại số bước đã nhảy được bằng 0
-          this.stepsLabel.string = '0';
-
+          this.stepsLabel.string = "0";
         }
-
 
         setTimeout(() => {
           if (this.playerCtrl) {
@@ -256,14 +253,11 @@ export class GameManager extends Component {
   }
 
   onPlayerJumpEnd(moveIndex: number) {
-
-
-    this.stepsLabel.string = '' + moveIndex;
+    this.stepsLabel.string = "" + moveIndex;
     // B26-4 : Cộng thêm số điểm sau mỗi bước nhảy
 
     this.checkResoult(moveIndex);
     // B25-2 Khai báo phương thức kết thúc là trỏ đến phương thức checkResoult có giá trị là moveIndex
-
   }
 
   /**
@@ -271,18 +265,18 @@ export class GameManager extends Component {
    * Trong bảng Hệ thống phân cấp , hãy nhấp vào Scene nút ở trên cùng,
    *  kiểm tra Enabled thuộc shadows tính và sửa đổi các thông số Distance và Normal
    * Sửa ShadowColor thành màu đen và sửa Normal thành (0,0,1); distance thành -1
-   * Nhấn vào nút phân cấp Body chuyển ShadowCastingMode thành ON 
+   * Nhấn vào nút phân cấp Body chuyển ShadowCastingMode thành ON
    * Lúc này chưa nhìn thấy bóng của player => Nhấn vào nut Main Light chuyển Rotation thành (-10,17,0)
-   * 
+   *
    */
 
   /**
    * B28 : Dowload Hình ảnh game cho phayer
-   * Kéo folder cocos vào assets 
+   * Kéo folder cocos vào assets
    * Kéo Cocos trong cocos vào bên trong Body
    * Remove cc.MeshRenderer
    * Created Spot Light trong Body => B29 bên PlayerController
-   * 
+   *
    */
 
   // update (deltaTime: number) {
