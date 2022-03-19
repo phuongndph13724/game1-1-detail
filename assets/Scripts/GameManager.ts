@@ -24,6 +24,7 @@ const { ccclass, property } = _decorator;
  */
 enum BlockType {
   /**
+   * B11-1
    * Khai báo một object có 2 thuộc tính
    * BT_NONE = 0
    * BT_STONE = 1
@@ -48,7 +49,7 @@ enum GameState {
 @ccclass("GameManager")
 export class GameManager extends Component {
   /**
-   * B11: Khởi tạo thuộc tính cubePrfb cho Prefab cube có giá trị null
+   * B11-2: Khởi tạo thuộc tính cubePrfb cho Prefab cube có giá trị null
    * Khởi tạo thuộc tính roadLength (độ dài của đường nhảy có giá trị là 100)
    * khai báo thuộc tính _road có kiểu dữ liệu là mội mảng Number[] có giá trị bằng rỗng
    */
@@ -88,7 +89,15 @@ export class GameManager extends Component {
 
   start() {
     // this.generteRoad();
-    // //B13 gọi dến hàm generteRoad() để chạy
+    // //B14 gọi dến hàm generteRoad() để chạy
+    // Kéo Cube trong Prefabs vào  CubePrfb trong nút GameManager
+    // Kéo Camenra main xuống Player
+    // Tạo một Button tên là PlayerButton trong nút csene
+    // Tạo một nút có tên là StartMenu trong Canvas và kéo PlayButton vào trong
+    // Điều chỉnh kích thước cho phù hợp
+    // Tạo một nút Sprite có tên là BG trong StartMenu và kéo lên trước PlayerButton
+
+
     // B22-1 : Trỏ đến hành động curState có giá trị bằng GameState.GS_INIT để bắt đầu game
     this.curState = GameState.GS_INIT;
 
@@ -173,7 +182,7 @@ export class GameManager extends Component {
 
   generteRoad() {
     /**
-     * B12 Khởi tạo phương thức : tạo các đoạn đường nhảy cho player
+     * B13 Khởi tạo phương thức : tạo các đoạn đường nhảy cho player
      */
     this.node.removeAllChildren();
     this._road = [];
@@ -205,7 +214,7 @@ export class GameManager extends Component {
 
   spawnBlockByType(type: BlockType) {
     /**
-     * B14  khởi taih biến block được trỏ tới phương thức spawnBlockByType có giá trị truyền vào là một _road[j]
+     * B12  khởi taih biến block được trỏ tới phương thức spawnBlockByType có giá trị truyền vào là một _road[j]
      *
      * B15 Tạo một menu bắt đầu đơn giản bắt đầu
      * Tạo một nút button có chế độ xem là 2D trong scene
