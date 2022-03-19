@@ -27,7 +27,11 @@ const { ccclass, property } = _decorator;
 export class PlayerController extends Component {
   // [1]
   // dummy = '';
-  // B7 Khởi tạo thành phần hoạt ảnh Animation
+  // B7 
+  // Thêm một folder Animations ở phần assets
+  // Tạo clip oneStep.anim có vị trí lần lượt là  (0, 0, 0) , (0, 0,5, 0) , (0, 0, 0) .
+  // Tạo clip twoStep.anim có vị trí lần lượt là  (0, 0, 0) , (0, 1, 0) , (0, 0, 0) .
+  // Khởi tạo thành phần hoạt ảnh Animation
   @property({ type: Animation })
   public BodyAnim: Animation | null = null;
   // [2]
