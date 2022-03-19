@@ -27,14 +27,16 @@ const { ccclass, property } = _decorator;
 export class PlayerController extends Component {
   // [1]
   // dummy = '';
-  // B7 
+  // B7
   // Thêm một folder Animations ở phần assets
   // Tạo clip oneStep.anim có vị trí lần lượt là  (0, 0, 0) , (0, 0,5, 0) , (0, 0, 0) .
   // Tạo clip twoStep.anim có vị trí lần lượt là  (0, 0, 0) , (0, 1, 0) , (0, 0, 0) .
   // Khởi tạo thành phần hoạt ảnh Animation
+  // Sửa Clips trong cc.Animation thành 2
   @property({ type: Animation })
   public BodyAnim: Animation | null = null;
-  // [2]
+  // Kéo 2 clip vào Clips cho oneStep.anim thành clip default
+  // Trong nút Player kéo Body đến BodyAnim
   // @property
   // serializableDummy = 0;
 
