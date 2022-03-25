@@ -175,7 +175,8 @@ export class GameManager extends Component {
 
   /**
    * B23: Khởi tạo phương thức click vào button thì sẽ bắt đầu game
-   * Gán GameManager cho PlayButton trong scene - GameManager - onStartButtonClickde()
+   * Thêm một sự kiệ ClickEvent trong nút PlayerButton
+   * Keoos GameManager vào trong ClickEvent PlayButton trong scene - GameManager - onStartButtonClickde()
    */
   onStartButtonClicked() {
     this.curState = GameState.GS_PLAYING;
