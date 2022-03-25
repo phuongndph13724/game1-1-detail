@@ -58,6 +58,7 @@ export class GameManager extends Component {
   @property({ type: CCInteger })
   public roadLength: Number = 1000;
 
+
   @property({ type: Label })
   public stepsLabel: Label | null = null;
   // B26-1 Khởi tạo Component stepsLabel cho GameManager
@@ -80,14 +81,14 @@ export class GameManager extends Component {
 
   private _road: number[] = [];
   //   khai báo thuộc tính đường nhảy
-  private _curState: GameState = GameState.GS_INIT;
-  // khai báo thuộc tính đại diện cho trạng thái game
-  // [1]
-  // dummy = '';
 
-  // [2]
-  // @property
-  // serializableDummy = 0;
+
+
+  private _curState: GameState = GameState.GS_INIT;
+  //B16-1 khai báo thuộc tính đại diện cho trạng thái game
+
+
+
 
   start() {
     // this.generteRoad();
