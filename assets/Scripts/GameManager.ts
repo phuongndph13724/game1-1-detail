@@ -105,7 +105,7 @@ export class GameManager extends Component {
     this.curState = GameState.GS_INIT;
 
     this.playerCtrl?.node.on("JumpEnd", this.onPlayerJumpEnd, this);
-    // B25-1 Thêm sự kiện kết thúc trò chơi cho game bằng hàm onPlayerJumpEnd
+    // B25-2 Thêm sự kiện kết thúc trò chơi cho game bằng hàm onPlayerJumpEnd
   }
 
   /**
@@ -241,6 +241,7 @@ export class GameManager extends Component {
    * B25
    * Tăng logic thất bại và kết thúc để đánh giá cách trò chơi đang được chơi.
    * Nếu Player nhảy đến một ô trống hoặc vượt quá giá trị độ dài tối đa, trò chơi sẽ kết thúc
+   * => Khởi tạo phương thức onPlayerJumpEnd()
    */
   checkResoult(moveIndex: number) {
     if (moveIndex <= this.roadLength) {
@@ -261,7 +262,7 @@ export class GameManager extends Component {
     // B26-4 : Cộng thêm số điểm sau mỗi bước nhảy
 
     this.checkResoult(moveIndex);
-    // B25-2 Khai báo phương thức kết thúc là trỏ đến phương thức checkResoult có giá trị là moveIndex
+    // B25-1 Khai báo phương thức kết thúc là trỏ đến phương thức checkResoult có giá trị là moveIndex
   }
 
   /**
