@@ -68,11 +68,13 @@ export class GameManager extends Component {
 
   @property({ type: Node })
   public startMenu: Node = null;
+  // B20-1 : Khởi tạo tartMenu cho GameManager
+
   /**
    * B20
    * Để tự động mở / đóng menu đang mở, StartMenu cần phải tham chiếu đến GameManager.
-   *  Kéo StartMenu khung cảnh vào biến này trong bảng StartMenu
-   *  Kéo Player khung cảnh vào biến này trong bảng PlayCtrl
+   *  Kéo StartMenu khung cảnh vào biến này trong bảng StartMenu trong GameManager
+   *  Kéo Player khung cảnh vào biến này trong bảng PlayCtrl trong GameManager
    * Sửa đổi mã trong phương thức start (),init(), set curState()
    */
 
@@ -96,6 +98,7 @@ export class GameManager extends Component {
     // Tạo một nút có tên là StartMenu trong Canvas và kéo PlayButton vào trong
     // Điều chỉnh kích thước cho phù hợp
     // Tạo một nút Sprite có tên là BG trong StartMenu và kéo lên trước PlayerButton
+    // Kéo Camera Main vào trong Player
 
     // B22-1 : Trỏ đến hành động curState có giá trị bằng GameState.GS_INIT để bắt đầu game
     this.curState = GameState.GS_INIT;
